@@ -118,7 +118,7 @@ body {
 	margin: 19px 0 40px;
 	cursor: pointer;
 }
-button{
+.form-detail .btn{
 	font-size: 18px;
 	color: #fff;
 	background: #3786bd;
