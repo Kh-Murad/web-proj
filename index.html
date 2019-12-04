@@ -46,7 +46,7 @@
 	          <li class="nav-item"><a href="about.html" class="nav-link">About</a></li>
 	          <li class="nav-item"><a href="car.html" class="nav-link">Our Cars</a></li>
 			  <li class="nav-item"><a href="contact.html" class="nav-link">Contact us</a></li>
-			  <li class="nav-item"><a href="sign.html" class="nav-link">Sign Up</a></li>
+			  <li class="nav-item"><a class="nav-link" onclick="openForm()">Sign Up</a></li>
 	        </ul>
 	      </div>
 	    </div>
@@ -97,6 +97,21 @@
       </div>
 	</div>
 	<br>
+
+	<div class="form-popup" id="myForm">
+			<form action="" class="form-container">
+			  <h1>Login</h1>
+		  
+			  <label for="email"><b>Email</b></label>
+			  <input type="text" placeholder="Enter Email" name="email" required>
+		  
+			  <label for="psw"><b>Password</b></label>
+			  <input type="password" placeholder="Enter Password" name="psw" required>
+		  
+			  <button type="submit" class="btn">Login</button>
+			  <button type="submit" class="btn cancel" onclick="closeForm()">Close</button>
+			</form>
+	</div>
 	
     <section id="srv" class="ftco-section services-section ftco-no-pt ftco-no-pb">
       <div class="container">
@@ -426,7 +441,15 @@
   <!-- loader -->
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
-
+  <script>
+		function openForm() {
+		  document.getElementById("myForm").style.display = "block";
+		}
+		
+		function closeForm() {
+		  document.getElementById("myForm").style.display = "none";
+		}
+		</script>
   <script src="js/jquery.min.js"></script>
   <script src="js/jquery-migrate-3.0.1.min.js"></script>
   <script src="js/popper.min.js"></script>
